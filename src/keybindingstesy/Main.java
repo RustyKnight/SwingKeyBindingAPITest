@@ -47,14 +47,14 @@ public class Main {
         }
 
         protected enum ActionKey {
-            UP(KeyEvent.VK_W), DOWN(KeyEvent.VK_S), LEFT(KeyEvent.VK_A), RIGHT(KeyEvent.VK_D);
+            UP(KeyBinding.Key.KeyType.W), DOWN(KeyBinding.Key.KeyType.S), LEFT(KeyBinding.Key.KeyType.A), RIGHT(KeyBinding.Key.KeyType.D);
 
             private final KeyBinding.Key pressedKey;
             private final KeyBinding.Key releasedKey;
 
-            private ActionKey(int keyEvent) {
-                this.pressedKey = new KeyBinding.Key(keyEvent, KeyBinding.Key.KeyTrigger.PRESSED);
-                this.releasedKey = new KeyBinding.Key(keyEvent, KeyBinding.Key.KeyTrigger.RELEASED);
+            private ActionKey(KeyBinding.Key.KeyType keyType) {
+                this.pressedKey = new KeyBinding.Key(keyType, KeyBinding.Key.KeyTrigger.PRESSED);
+                this.releasedKey = new KeyBinding.Key(keyType, KeyBinding.Key.KeyTrigger.RELEASED);
             }
 
             public KeyBinding.Key getPressedKey() {
