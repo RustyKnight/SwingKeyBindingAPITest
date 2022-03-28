@@ -25,9 +25,9 @@ The intention of this API is to try and reduce this down to something more like.
     });
     enterKeyBinding.bindTo(this);
 
-So, ths makes use of some "common" defaults.
+So, this makes use of some "common" defaults.
 
-1. The "trigger" state is "pressed" (ie when the key is pressed)
+1. The "trigger" state is "pressed" (ie when the key is pushed down)
 2. The "focus state" is `JComponent.WHEN_IN_FOCUSED_WINDOW`
 
 But wait, you want to know when the key was released, not pressed, no worries:
